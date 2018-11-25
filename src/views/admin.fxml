@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import java.lang.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.121" fx:controller="Controls.Admin">
+    <ImageView fitHeight="80.0" fitWidth="175.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@/images/Capture23.PNG"/>
+    </ImageView>
+    <Pane fx:id="staff" layoutX="8.0" layoutY="71.0" prefHeight="266.0" prefWidth="167.0">
+        <TextField fx:id="id" editable="false" layoutY="3.0" prefHeight="25.0" prefWidth="166.0" promptText="Id"/>
+        <ComboBox fx:id="role" layoutX="1.0" layoutY="108.0" prefHeight="25.0" prefWidth="166.0" promptText="Role">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="appraiser"/>
+                    <String fx:value="recoverer"/>
+                    <String fx:value="credit manager"/>
+                    <String fx:value="credit committee"/>
+                    <String fx:value="admin"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <TextField fx:id="name" layoutY="37.0" prefHeight="25.0" prefWidth="166.0" promptText="Name"/>
+        <TextField fx:id="password" layoutY="71.0" prefHeight="25.0" prefWidth="166.0" promptText="Password"/>
+        <TextField fx:id="phone_number" layoutY="146.0" prefHeight="25.0" prefWidth="166.0" promptText="Phone Number"/>
+        <TextArea fx:id="address" layoutX="1.0" layoutY="180.0" prefHeight="80.0" prefWidth="166.0"
+                  promptText="Address"/>
+    </Pane>
+    <Button fx:id="add" layoutX="137.0" layoutY="342.0" mnemonicParsing="false" text="Add"/>
+    <Button fx:id="edit" layoutX="8.0" layoutY="342.0" mnemonicParsing="false" text="Edit"/>
+    <TableView fx:id="view" layoutX="181.0" prefHeight="401.0" prefWidth="418.0"/>
+    <Button fx:id="delete" layoutX="66.0" layoutY="342.0" mnemonicParsing="false" text="Delete"/>
+    <Button fx:id="close" layoutX="8.0" layoutY="375.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="166.0"
+            text="Close"/>
+
+</AnchorPane>

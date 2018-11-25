@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="325.0">Server</node>
+    <node x="0.0" y="0.0">Item</node>
+    <node x="125.0" y="325.0">Client</node>
+    <node x="220.0" y="207.0">AuctioningServer</node>
+    <node x="0.0" y="207.0">Main</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="86.5" />
+  <SelectedNodes>
+    <node>Item</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

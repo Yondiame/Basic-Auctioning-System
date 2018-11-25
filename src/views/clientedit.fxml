@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="438.0" prefWidth="669.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/9.0.1">
+    <children>
+        <AnchorPane prefHeight="438.0" prefWidth="164.0" style="-fx-background-color: GREY;">
+            <children>
+                <ImageView fitHeight="83.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/images/Capture23.PNG"/>
+                    </image>
+                </ImageView>
+                <Button layoutX="35.0" layoutY="256.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="96.0"
+                        text="CLOSE"/>
+                <Button layoutX="35.0" layoutY="167.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="96.0"
+                        text="UPDATE"/>
+                <ImageView fitHeight="93.0" fitWidth="146.0" layoutX="10.0" layoutY="340.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@/images/capital.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="164.0" prefHeight="118.0" prefWidth="506.0" style="-fx-background-color: GREY;">
+            <children>
+                <Label layoutX="115.0" layoutY="31.0" prefHeight="35.0" prefWidth="332.0" text="EDIT CLIENT DETAILS">
+                    <font>
+                        <Font name="Bell MT" size="29.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <TableView layoutX="156.0" layoutY="76.0" prefHeight="363.0" prefWidth="514.0">
+            <columns>
+                <TableColumn prefWidth="98.4000244140625" text="C1"/>
+                <TableColumn prefWidth="99.199951171875" text="C2"/>
+                <TableColumn prefWidth="96.79998779296875" text="Column X"/>
+                <TableColumn prefWidth="88.79998779296875" text="Column X"/>
+                <TableColumn prefWidth="88.00006103515625" text="Column X"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="582.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/8">
+    <content>
+        <AnchorPane prefHeight="1194.0" prefWidth="823.0" style="-fx-background-color: white;">
+            <children>
+                <Label layoutX="201.0" layoutY="91.0" prefHeight="40.0" prefWidth="402.0"
+                       text="1. SOLE PROPRIETOR DETAILS">
+                    <font>
+                        <Font name="System Bold Italic" size="28.0"/>
+                    </font>
+                </Label>
+                <ImageView fitHeight="102.0" fitWidth="212.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@/images/Capture23.PNG"/>
+                    </image>
+                </ImageView>
+                <TextField fx:id="FirstName" layoutX="66.0" layoutY="258.0" prefHeight="29.0" prefWidth="208.0"
+                           promptText="FIRST NAME :"/>
+                <TextField fx:id="Surname" layoutX="296.0" layoutY="258.0" prefHeight="30.0" prefWidth="216.0"
+                           promptText=" SURNAME :"/>
+                <TextField fx:id="OtherNames" layoutX="531.0" layoutY="258.0" prefHeight="30.0" prefWidth="226.0"
+                           promptText="OTHER NAMES :"/>
+                <DatePicker layoutX="66.0" layoutY="313.0" prefHeight="26.0" prefWidth="208.0"
+                            promptText="DATE OF BIRTH"/>
+                <DatePicker layoutX="325.0" layoutY="313.0" prefHeight="26.0" prefWidth="158.0" promptText="AGE"/>
+                <TextField layoutX="534.0" layoutY="313.0" prefHeight="26.0" prefWidth="226.0"
+                           promptText="PLACE OF BIRTH :"/>
+                <TextField fx:id="OfficeNum" layoutX="67.0" layoutY="369.0" prefHeight="26.0" prefWidth="208.0"
+                           promptText="OFFICE NUMBER :"/>
+                <TextField fx:id="ResNum" layoutX="300.0" layoutY="368.0" prefHeight="26.0" prefWidth="208.0"
+                           promptText="RESIDENCE NUMBER :"/>
+                <TextField fx:id="OtherNum" layoutX="533.0" layoutY="369.0" prefHeight="26.0" prefWidth="226.0"
+                           promptText="OTHER NUMBER :"/>
+                <TextField fx:id="PosTAdd" layoutX="67.0" layoutY="415.0" prefHeight="26.0" prefWidth="691.0"
+                           promptText="POSTAL ADDRESS :"/>
+                <TextField fx:id="EmailAddr" layoutX="67.0" layoutY="461.0" prefHeight="26.0" prefWidth="691.0"
+                           promptText="EMAIL ADDRESS :"/>
+                <TextField fx:id="ResAdress" layoutX="67.0" layoutY="504.0" prefHeight="26.0" prefWidth="691.0"
+                           promptText="RESIDENTIAL ADDRESS :"/>
+                <ComboBox fx:id="AccomodationComboBox" layoutX="67.0" layoutY="549.0" prefHeight="26.0"
+                          prefWidth="329.0" promptText="ACCOMODATION TYPE" visibleRowCount="4"/>
+                <TextField fx:id="lenghtOfStayAtCurrentAddr" layoutX="68.0" layoutY="598.0" prefHeight="26.0"
+                           prefWidth="330.0" promptText="LENGHT OF STAY AT CURRENT ADDRESS :"/>
+                <TextField fx:id="LenghtOfStayAtPrevAdd" layoutX="443.0" layoutY="598.0" prefHeight="26.0"
+                           prefWidth="318.0" promptText="LENGHT OF STAY AT PREVIOUS ADDRESS :"/>
+                <TextField fx:id="passport" layoutX="66.0" layoutY="644.0" prefHeight="26.0" prefWidth="330.0"
+                           promptText="PASSPORT/DRIVERS LICENSE/VOTERS ID :"/>
+                <TextField fx:id="issExpD" layoutX="440.0" layoutY="644.0" prefHeight="26.0" prefWidth="318.0"
+                           promptText="ISSUE DATE/ EXPIRY DATE :"/>
+                <Label layoutX="302.0" layoutY="694.0" prefHeight="31.0" prefWidth="201.0" text="2. BUSINESS DETAILS">
+                    <font>
+                        <Font name="System Italic" size="21.0"/>
+                    </font>
+                </Label>
+                <Line endX="100.0" layoutX="398.0" layoutY="726.0" startX="-100.0"/>
+                <TextField fx:id="EmailAddr1" layoutX="70.0" layoutY="740.0" prefHeight="26.0" prefWidth="691.0"
+                           promptText="BUSINESS NAME :"/>
+                <TextField fx:id="EmailAddr11" layoutX="70.0" layoutY="787.0" prefHeight="26.0" prefWidth="691.0"
+                           promptText="POSTAL ADDRESS :"/>
+                <TextField fx:id="EmailAddr111" layoutX="69.0" layoutY="830.0" prefHeight="26.0" prefWidth="691.0"
+                           promptText="EMAIL ADDRESS :"/>
+                <TextField fx:id="EmailAddr1111" layoutX="70.0" layoutY="885.0" prefHeight="26.0" prefWidth="691.0"
+                           promptText="PHYSICAL ADDRESS : "/>
+                <Label layoutX="74.0" layoutY="911.0" prefHeight="18.0" prefWidth="362.0"
+                       text="If different from whats under personal details *"/>
+                <TextField fx:id="EmailAddr" layoutX="70.0" layoutY="937.0" prefHeight="26.0" prefWidth="691.0"
+                           promptText="AVERAGE MONTHLY SALES TURNOVER"/>
+                <TextField fx:id="Bank1" layoutX="70.0" layoutY="1000.0" prefHeight="26.0" prefWidth="226.0"
+                           promptText="BANK"/>
+                <Label layoutX="74.0" layoutY="981.0" prefHeight="18.0" prefWidth="362.0" text="Current Bankers"/>
+                <TextField fx:id="branch1" layoutX="302.0" layoutY="1000.0" prefHeight="26.0" prefWidth="226.0"
+                           promptText="BRANCH"/>
+                <TextField fx:id="address1" layoutX="536.0" layoutY="1000.0" prefHeight="26.0" prefWidth="226.0"
+                           promptText="ADDRESS"/>
+                <TextField fx:id="bank2" layoutX="70.0" layoutY="1052.0" prefHeight="26.0" prefWidth="226.0"
+                           promptText="BANK"/>
+                <TextField fx:id="branch2" layoutX="302.0" layoutY="1052.0" prefHeight="26.0" prefWidth="226.0"
+                           promptText="BRANCH"/>
+                <TextField fx:id="address2" layoutX="536.0" layoutY="1052.0" prefHeight="26.0" prefWidth="226.0"
+                           promptText="ADDRESS"/>
+                <TextField fx:id="bank3" layoutX="69.0" layoutY="1107.0" prefHeight="26.0" prefWidth="226.0"
+                           promptText="BANK"/>
+                <TextField fx:id="branch3" layoutX="302.0" layoutY="1107.0" prefHeight="26.0" prefWidth="226.0"
+                           promptText="BRANCH"/>
+                <TextField fx:id="address3" layoutX="536.0" layoutY="1107.0" prefHeight="26.0" prefWidth="226.0"
+                           promptText="ADDRESS"/>
+                <Label layoutX="261.0" layoutY="1144.0" prefHeight="31.0" prefWidth="318.0"
+                       text="3.NEW FUNDING REQUIREMENTS">
+                    <font>
+                        <Font name="System Italic" size="21.0"/>
+                    </font>
+                </Label>
+                <Line endX="100.0" layoutX="329.0" layoutY="1177.0" startX="-100.0"/>
+                <Line endX="100.0" layoutX="522.0" layoutY="1177.0" startX="-100.0"/>
+                <TextField layoutX="69.0" layoutY="1195.0" prefHeight="26.0" prefWidth="257.0"
+                           promptText="AMOUNT SOUGHT"/>
+                <TextField layoutX="508.0" layoutY="1195.0" prefHeight="26.0" prefWidth="257.0"
+                           promptText="TERM (IN MONTHS)"/>
+                <TextField layoutX="69.0" layoutY="1242.0" prefHeight="120.0" prefWidth="691.0" promptText="PURPOSE"/>
+                <SplitPane layoutX="153.0" layoutY="1404.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="534.0">
+                    <items>
+                        <Label prefHeight="64.0" prefWidth="277.0" text="4. EXISTING LOAN DEALS">
+                            <font>
+                                <Font name="System Italic" size="21.0"/>
+                            </font>
+                        </Label>
+                    </items>
+                </SplitPane>
+                <TextField fx:id="EmailAddr2" layoutX="69.0" layoutY="1468.0" prefHeight="26.0" prefWidth="691.0"
+                           promptText="NAME OF LENDING INSTITUTION"/>
+                <TextField fx:id="EmailAddr21" layoutX="69.0" layoutY="1512.0" prefHeight="26.0" prefWidth="691.0"
+                           promptText="TOTAL OUTSTANDING BALANCE"/>
+                <TextField fx:id="EmailAddr211" layoutX="69.0" layoutY="1557.0" prefHeight="26.0" prefWidth="691.0"
+                           promptText="TOTAL MONTHLY COMMITMENTS"/>
+
+
+                <AnchorPane layoutX="18.0" layoutY="232.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                            prefWidth="200.0"/>
+                <ComboBox layoutX="262.0" layoutY="181.0" prefHeight="25.0" prefWidth="277.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Apple"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

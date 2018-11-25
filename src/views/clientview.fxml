@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="480.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/9.0.1">
+    <children>
+        <AnchorPane layoutX="144.0" prefHeight="114.0" prefWidth="529.0" style="-fx-background-color: grey;">
+            <children>
+                <Label layoutX="107.0" layoutY="32.0" prefHeight="50.0" prefWidth="339.0" text="VIEW CLIENT DETIALS">
+                    <font>
+                        <Font name="Bell MT" size="29.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="480.0" prefWidth="156.0" style="-fx-background-color: grey;">
+            <children>
+                <ImageView fitHeight="126.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/images/Capture23.PNG"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="90.0" fitWidth="158.0" layoutX="6.0" layoutY="376.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@/images/capital.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <TableView layoutX="155.0" layoutY="80.0" prefHeight="400.0" prefWidth="517.0">
+            <columns>
+                <TableColumn prefWidth="98.4000244140625" text="C1"/>
+                <TableColumn prefWidth="99.199951171875" text="C2"/>
+                <TableColumn prefWidth="96.79998779296875" text="Column X"/>
+                <TableColumn prefWidth="88.79998779296875" text="Column X"/>
+                <TableColumn prefWidth="88.00006103515625" text="Column X"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
