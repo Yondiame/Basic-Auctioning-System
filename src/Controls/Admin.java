@@ -9,7 +9,7 @@ import javafx.scene.layout.Pane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Admin implements Initializable {
+public class Admin implements Initializable, Window {
 
     public Pane staff;
     public Button add, edit, delete, close;
@@ -21,11 +21,12 @@ public class Admin implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Populate.table(view, "*", "Staff", "1=1");
+        Populate.table(view, "*", "Staff", " 1=1");
         add.setOnAction(e -> {
             Entity n = new Entity(Populate.populate(staff));
             new Staff(n.getDetails()).create();
-            view.getItems().add(n);
+            Populate.table(view, "*", "Staff", " 1=1");
+            view.refresh();
         });
 
         delete.setOnAction(e -> {
@@ -70,6 +71,6 @@ public class Admin implements Initializable {
                 Populate.updateTable(view, role, "*", "Staff");
         });
 
-        close.setOnAction(Window::close);
+        close.setOnAction(this::close);
     }
 }

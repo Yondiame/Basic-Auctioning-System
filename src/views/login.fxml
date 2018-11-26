@@ -8,11 +8,10 @@
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1"
-      fx:controller="starmicrofinance.login">
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.121"
+      fx:controller="Controls.Login">
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="402.0" prefWidth="574.0"
                     style="-fx-background-color: gray;" VBox.vgrow="ALWAYS">
@@ -26,18 +25,22 @@
                 <AnchorPane layoutX="358.0" layoutY="40.0" opacity="0.88" prefHeight="298.0" prefWidth="298.0"
                             style="-fx-background-color: white;">
                     <children>
-                        <PasswordField layoutX="58.0" layoutY="140.0" prefHeight="26.0" prefWidth="190.0"
-                                       promptText="PASSWORD">
-                            <font>
-                                <Font name="System Bold" size="16.0"/>
-                            </font>
+                        <Pane fx:id="login" layoutX="58.0" layoutY="74.0">
+                            <children>
+                                <PasswordField fx:id="password" layoutY="66.0" prefHeight="26.0" prefWidth="190.0"
+                                               promptText="PASSWORD">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
                         </PasswordField>
-                        <TextField layoutX="58.0" layoutY="74.0" prefHeight="26.0" prefWidth="190.0"
-                                   promptText="USERNAME/EMAIL">
-                            <font>
-                                <Font size="16.0"/>
-                            </font>
+                                <TextField fx:id="uname" prefHeight="26.0" prefWidth="190.0"
+                                           promptText="USERNAME/EMAIL">
+                                    <font>
+                                        <Font size="16.0"/>
+                                    </font>
                         </TextField>
+                            </children>
+                        </Pane>
                         <Button fx:id="sign" layoutX="102.0" layoutY="194.0" mnemonicParsing="false" prefHeight="32.0"
                                 prefWidth="102.0" text="SIGN IN"/>
                     </children>
@@ -58,8 +61,8 @@
                         <Image url="@/images/capital.png"/>
                     </image>
                 </ImageView>
-                <Button fx:id="closebutton" layoutX="624.0" layoutY="1.0" mnemonicParsing="false"
-                        onAction="#closeButtonAction" prefHeight="26.0" prefWidth="31.0" text="X"/>
+                <Button fx:id="x" layoutX="624.0" layoutY="1.0" mnemonicParsing="false" prefHeight="26.0"
+                        prefWidth="31.0" text="X"/>
             </children>
             <effect>
                 <Blend opacity="0.19"/>

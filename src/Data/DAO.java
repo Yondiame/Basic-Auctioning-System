@@ -7,9 +7,10 @@ import java.util.List;
 
 public class DAO {
 
-    private static int i = 0;
     Connection con;
     Statement st;
+
+    private static int i = 0;
 
     public DAO(String host, String port, String db, String user, String password) {
         try {
@@ -26,11 +27,25 @@ public class DAO {
         int columns = md.getColumnCount();
         List<HashMap<String, String>> rows = new ArrayList<HashMap<String, String>>();
         while (rs.next()) {
-            HashMap<String, String> row = new HashMap<String, String>(columns);
+            HashMap<String, String> row = new HashMap<String, String>();
             for (int i = 1; i <= columns; ++i) {
-                row.put(md.getColumnName(i), rs.getObject(i).toString());
+                if (rs.getObject(i) != null)
+                    row.put(md.getColumnName(i), rs.getObject(i).toString());
             }
             rows.add(row);
+        }
+        return rows;
+    }
+
+    public List<String> column(String table) {
+        List<String> rows = new ArrayList<>();
+        try (ResultSet rs = st.executeQuery("SELECT * FROM " + table + " WHERE 1=1 ")) {
+            ResultSetMetaData md = rs.getMetaData();
+            for (int i = 1; i <= md.getColumnCount(); ++i) {
+                rows.add(md.getColumnName(i));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return rows;
     }
@@ -48,8 +63,8 @@ public class DAO {
 
     public List<HashMap<String, String>> select(String data, String table, String condition) {
         List<HashMap<String, String>> result = new ArrayList<HashMap<String, String>>();
-        System.out.println("SELECT " + data + " FROM " + table + " WHERE " + condition);
-        try (ResultSet rs = st.executeQuery("SELECT " + data + " FROM " + table + " WHERE " + condition)) {
+        System.out.println("SELECT " + data + " FROM " + table + " WHERE" + condition);
+        try (ResultSet rs = st.executeQuery("SELECT " + data + " FROM " + table + " WHERE" + condition)) {
             result = resultSetToList(rs);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -70,6 +85,7 @@ public class DAO {
                 keys.append(',');
             }
         });
+        i = 0;
 
         System.out.println(keys);
         System.out.println(vals);

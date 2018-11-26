@@ -23,6 +23,7 @@ public interface CRUD {
     }
 
     default HashMap<String, String> create() {
+        getDetails().remove("id");
         getDetails().put("id", "" + data.insert(getName(), getDetails()));
         return getDetails();
     }
@@ -47,7 +48,9 @@ public interface CRUD {
     default HashMap<String, String> read(String condition) throws NullPointerException {
         if (getDetails().get("id") == null)
             throw new NullPointerException();
-        data.select(" * ", getName(), condition).get(0).forEach((k, v) -> getDetails().put(k, v));
+        data.select(" * ", getName(), condition).get(0).forEach((k, v) -> {
+            getDetails().put(k, v);
+        });
         return getDetails();
     }
 }
