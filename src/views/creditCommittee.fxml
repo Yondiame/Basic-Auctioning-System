@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="410.0" prefWidth="648.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/8.0.121" fx:controller="Controls.CreditCommitee">
+    <TableView fx:id="view" layoutX="190.0" layoutY="87.0" prefHeight="322.0" prefWidth="454.0">
+        <columns>
+        </columns>
+    </TableView>
+    <SplitPane layoutX="190.0" layoutY="32.0" orientation="VERTICAL" prefHeight="34.0" prefWidth="454.0">
+        <Label prefHeight="57.0" prefWidth="232.0" text="LOAN REQUEST">
+            <font>
+                <Font name="Bell MT Bold" size="24.0"/>
+            </font>
+        </Label>
+    </SplitPane>
+    <ImageView fitHeight="75.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@/images/Capture23.PNG"/>
+    </ImageView>
+    <Pane fx:id="loan" layoutX="9.0" layoutY="87.0">
+        <TextField fx:id="client_id" editable="false" layoutX="2.0" prefHeight="26.0" prefWidth="169.0"
+                   promptText="CLIENT ID"/>
+        <TextField fx:id="amount" layoutX="2.0" layoutY="39.0" prefHeight="26.0" prefWidth="169.0"
+                   promptText="AMOUNT"/>
+        <TextField fx:id="repayment_percentage" layoutX="2.0" layoutY="79.0" prefHeight="26.0" prefWidth="169.0"
+                   promptText="REPAYMENT PERCENTAGE"/>
+        <TextField fx:id="term" layoutX="2.0" layoutY="118.0" prefHeight="26.0" prefWidth="169.0"
+                   promptText="TERM"/>
+        <TextField fx:id="purpose" layoutX="2.0" layoutY="161.0" prefHeight="26.0" prefWidth="169.0"
+                   promptText="PURPOSE"/>
+        <TextField fx:id="repayment_amount" layoutX="2.0" layoutY="200.0" prefHeight="26.0" prefWidth="169.0"
+                   promptText="REPAYMENT AMOUNT"/>
+        <TextField fx:id="id" layoutY="278.0" prefHeight="31.0" prefWidth="73.0" promptText="Loan Id"/>
+        <ComboBox fx:id="status" layoutX="1.0" layoutY="240.0" prefHeight="31.0" prefWidth="169.0"
+                  promptText="STATUS">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="pending"/>
+                    <String fx:value="active"/>
+                    <String fx:value="rejected"/>
+                    <String fx:value="completed"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </Pane>
+    <Button fx:id="confirm" layoutX="89.0" layoutY="365.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="88.0"
+            text="CONFIRM"/>
+</AnchorPane>

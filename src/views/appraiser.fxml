@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.lang.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="405.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/8.0.121"
+            fx:controller="Controls.Appraiser">
+    <ImageView fitHeight="75.0" fitWidth="86.0" layoutX="640.0" layoutY="323.0" pickOnBounds="true"
+               preserveRatio="true">
+        <Image url="@/images/capital.png"/>
+    </ImageView>
+    <TableView fx:id="clients" layoutX="146.0" prefHeight="405.0" prefWidth="188.0"/>
+    <AnchorPane prefHeight="405.0" prefWidth="174.0" style="-fx-background-color: b;">
+        <ImageView fitHeight="66.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true"
+                   style="-fx-blend-mode: blue;">
+            <Image url="@../images/Capture23.PNG"/>
+        </ImageView>
+        <ComboBox fx:id="addClient" layoutY="130.0" prefHeight="42.0" prefWidth="147.0" promptText=" ADD  CLIENT">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Individual"/>
+                    <String fx:value="Sole Proprietor"/>
+                    <String fx:value="Investors"/>
+                    <String fx:value="Corporate"/>
+                    <String fx:value="Bankers"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Button fx:id="editClient" layoutY="216.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="147.0"
+                text="EDIT CLIENT"/>
+        <TextField fx:id="search" layoutY="294.0" prefHeight="25.0" prefWidth="147.0" promptText="SEARCH CLIENT"/>
+        <Button layoutX="41.0" layoutY="350.0" mnemonicParsing="false" text="Close" fx:id="x"/>
+    </AnchorPane>
+    <TableView fx:id="loans" layoutX="334.0" prefHeight="405.0" prefWidth="435.0"/>
+</AnchorPane>

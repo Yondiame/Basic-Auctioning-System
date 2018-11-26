@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="461.0" prefWidth="810.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/8.0.121" fx:controller="Controls.Recoverer">
+    <children>
+        <ImageView fitHeight="58.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Capture23.PNG"/>
+            </image>
+        </ImageView>
+        <TableView fx:id="view" layoutX="194.0" layoutY="108.0" prefHeight="348.0" prefWidth="411.0"/>
+        <TitledPane animated="false" layoutX="194.0" layoutY="-176.0" text="untitled"/>
+        <SplitPane layoutX="190.0" layoutY="35.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="411.0">
+            <items>
+                <Label prefHeight="18.0" prefWidth="173.0" text="OVERDUE REQUESTS">
+                    <font>
+                        <Font name="Bell MT Bold" size="16.0"/>
+                    </font>
+                </Label>
+            </items>
+        </SplitPane>
+        <Button layoutX="721.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0" text="SIGN OUT" fx:id="x"/>
+        <Pane fx:id="loan" layoutX="12.0" layoutY="145.0">
+            <children>
+                <TextField fx:id="client_id" layoutX="2.0" layoutY="39.0" prefHeight="26.0" prefWidth="164.0"
+                           promptText="CLIENT ID"/>
+                <TextField fx:id="amount" layoutY="79.0" prefHeight="26.0" prefWidth="164.0" promptText="LOAN AMOUNT"/>
+                <ComboBox fx:id="status" layoutY="113.0" prefHeight="27.0" prefWidth="164.0"
+                          promptText="ACCOUNT STATUS"/>
+                <TextField fx:id="repayment_percentage" layoutY="147.0" prefHeight="26.0" prefWidth="164.0"
+                           promptText="REPAYMENT PERCENTAGE"/>
+                <TextField fx:id="repayment_amount" layoutY="181.0" prefHeight="26.0" prefWidth="164.0"
+                           promptText="REPAYMENT AMOUNT"/>
+                <TextField fx:id="purpose" layoutY="214.0" prefHeight="26.0" prefWidth="164.0" promptText="PURPOSE"/>
+                <TextField fx:id="term" layoutY="247.0" prefHeight="26.0" prefWidth="164.0" promptText="TERM"/>
+                <TextField fx:id="id" layoutX="3.0" prefHeight="31.0" prefWidth="164.0" promptText="ID"/>
+            </children>
+        </Pane>
+        <TextField layoutY="71.0" prefHeight="26.0" prefWidth="192.0" promptText="SEARCH "/>
+        <SplitPane layoutX="607.0" layoutY="108.0" orientation="VERTICAL" prefHeight="26.0" prefWidth="202.0">
+            <items>
+                <Label prefHeight="22.0" prefWidth="214.0" text="REPAYMENT DETAILS">
+                    <font>
+                        <Font name="Bell MT Bold" size="16.0"/>
+                    </font>
+                </Label>
+            </items>
+        </SplitPane>
+        <SplitPane layoutY="108.0" orientation="VERTICAL" prefHeight="26.0" prefWidth="192.0">
+            <items>
+                <Label prefHeight="26.0" prefWidth="154.0" text="LOAN DETAILS">
+                    <font>
+                        <Font name="Bell MT Bold" size="16.0"/>
+                    </font>
+                </Label>
+            </items>
+        </SplitPane>
+        <Button fx:id="submit" layoutX="14.0" layoutY="423.0" mnemonicParsing="false" text="Submit"/>
+        <Pane fx:id="repayment" layoutX="619.0" layoutY="160.0">
+            <children>
+                <TextField fx:id="loan_id" prefHeight="26.0" prefWidth="164.0" promptText="LOAN ID"/>
+                <TextField fx:id="amount" layoutY="33.0" prefHeight="26.0" prefWidth="164.0" promptText="AMOUNT"/>
+                <DatePicker fx:id="due_date" layoutX="1.0" layoutY="67.0" prefHeight="22.0" prefWidth="164.0"
+                            promptText="DATE DUE"/>
+                <DatePicker fx:id="date_repayed" layoutY="98.0" prefHeight="22.0" prefWidth="164.0"
+                            promptText="DATE REPAYED"/>
+                <TextField fx:id="repayment_method" layoutY="132.0" prefHeight="26.0" prefWidth="164.0"
+                           promptText="REPAYMENT METHOD"/>
+            </children>
+        </Pane>
+        <Button fx:id="commit" layoutX="676.0" layoutY="326.0" mnemonicParsing="false" text="Commit"/>
+    </children>
+</AnchorPane>

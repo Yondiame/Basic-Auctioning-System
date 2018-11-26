@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="633.0" prefWidth="776.0"
+            xmlns="http://javafx.com/javafx/8.0.121" fx:controller="Controls.Guarantors">
+    <content>
+        <AnchorPane fx:id="boss" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    prefHeight="1600.0" prefWidth="774.0" style="-fx-background-color: WHITE;">
+            <children>
+                <Label layoutX="260.0" layoutY="67.0" prefHeight="44.0" prefWidth="254.0" text="GUARANTOR'S FORM">
+                    <font>
+                        <Font name="System Bold Italic" size="22.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="58.0" layoutY="126.0" prefHeight="26.0" prefWidth="288.0"
+                       text="SHOULD BE COMPLETED BY GUARANTOR ONLY"/>
+                <ImageView fitHeight="92.0" fitWidth="226.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/images/Capture23.PNG"/>
+                    </image>
+                </ImageView>
+                <Line endX="100.0" layoutX="125.0" layoutY="153.0" startX="-100.0"/>
+                <Line endX="100.0" layoutX="293.0" layoutY="153.0" startX="-100.0"/>
+                <Label layoutX="48.0" layoutY="208.0" prefHeight="26.0" prefWidth="121.0" text="MARITAL STATUS :"/>
+                <Pane fx:id="Guarantor1" layoutX="25.0" layoutY="154.0" prefHeight="233.0" prefWidth="504.0">
+                    <children>
+                        <ComboBox fx:id="marital_status" layoutX="298.0" prefHeight="25.0" prefWidth="204.0"
+                                  promptText="MARITAL STATUS">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Married"/>
+                                    <String fx:value="Window"/>
+                                    <String fx:value="Divorced"/>
+                                    <String fx:value="Other"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <DatePicker fx:id="date_of_birth" layoutX="1.0" layoutY="155.0" prefHeight="18.0"
+                                    prefWidth="226.0" promptText="DATE OF BIRTH"/>
+                        <TextField fx:id="mobile_number" layoutX="332.0" layoutY="196.0" prefHeight="26.0"
+                                   prefWidth="170.0" promptText="PERSONAL MOBILE"/>
+                        <TextField fx:id="no_of_children" layoutX="1.0" layoutY="196.0" prefHeight="26.0"
+                                   prefWidth="189.0" promptText="NUMBER OF CHILDREN"/>
+                        <TextField fx:id="name" layoutY="34.0" prefHeight="26.0" prefWidth="502.0"
+                                   promptText="NAME OF GUARANTOR"/>
+                    </children>
+                </Pane>
+                <Pane fx:id="Identification2" layoutX="35.0" layoutY="657.0">
+                    <children>
+                        <ComboBox fx:id="id_type" layoutX="300.0" prefHeight="25.0" prefWidth="200.0"
+                                  promptText="ID TYPE">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="NHIS"/>
+                                    <String fx:value="Driver's License"/>
+                                    <String fx:value="Voter ID"/>
+                                    <String fx:value="Passport"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <TextField fx:id="idNo" layoutY="37.0" prefHeight="26.0" prefWidth="189.0"
+                                   promptText="ID NUMBER"/>
+                        <DatePicker fx:id="expiry_date" layoutX="465.0" layoutY="37.0" prefHeight="26.0"
+                                    prefWidth="189.0" promptText="EXPIRY DATE (IF APPLICABLE)"/>
+                        <DatePicker fx:id="issue_date" layoutX="229.0" layoutY="37.0" prefHeight="26.0"
+                                    prefWidth="189.0" promptText="ISSUE DATE"/>
+                        <Label layoutX="1.0" layoutY="3.0" prefHeight="26.0" prefWidth="212.0"
+                               text="TICK ONE AND PROVIDE DETAILS :"/>
+                    </children>
+                </Pane>
+                <Pane fx:id="Company2" layoutX="35.0" layoutY="387.0">
+                    <children>
+                        <ComboBox fx:id="employment_terms" layoutX="477.0" layoutY="128.0" prefHeight="25.0"
+                                  prefWidth="178.0" promptText="Employment Terms">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Permanent"/>
+                                    <String fx:value="Contract"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <TextField fx:id="department" layoutX="337.0" layoutY="82.0" prefHeight="26.0" prefWidth="318.0"
+                                   promptText="DEPARTMENT"/>
+                        <TextField fx:id="name_of_company" layoutX="273.0" prefHeight="26.0" prefWidth="382.0"
+                                   promptText="NAME OF COMPANY OR ORGANIZATION"/>
+                        <TextField fx:id="postal_address" layoutX="429.0" layoutY="41.0" prefHeight="26.0"
+                                   prefWidth="226.0" promptText="POSTAL ADDRESS"/>
+                        <TextField fx:id="branch" layoutY="82.0" prefHeight="26.0" prefWidth="294.0"
+                                   promptText="BRANCH"/>
+                        <TextField fx:id="position" layoutX="213.0" layoutY="41.0" prefHeight="26.0" prefWidth="189.0"
+                                   promptText="POSITION"/>
+                        <TextField fx:id="SSFNO" layoutX="273.0" layoutY="128.0" prefHeight="25.0" prefWidth="172.0"
+                                   promptText="SSFNO"/>
+                        <TextField fx:id="office_number" layoutY="213.0" prefHeight="26.0" prefWidth="190.0"
+                                   promptText="TELEPHONE OFFICE"/>
+                        <TextField fx:id="length_of_service" layoutY="127.0" prefHeight="26.0" prefWidth="226.0"
+                                   promptText="LENGTH OF SERVICE"/>
+                    </children>
+                </Pane>
+                <Pane fx:id="Address2" layoutX="257.0" layoutY="766.0" prefHeight="173.0" prefWidth="491.0">
+                    <children>
+                        <TextField fx:id="home_number" layoutX="239.0" layoutY="42.0" prefHeight="26.0"
+                                   prefWidth="190.0" promptText="TELEPHONE HOME"/>
+                        <ComboBox fx:id="residence_type" layoutX="14.0" layoutY="43.0" prefHeight="25.0"
+                                  prefWidth="165.0" promptText="RESIDENCE TYPE">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Rented"/>
+                                    <String fx:value="Owned"/>
+                                    <String fx:value="Mortgage"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <TextField fx:id="town" prefHeight="26.0" prefWidth="318.0" promptText="RESIDENCE TOWN"/>
+                        <TextArea fx:id="address" layoutX="7.0" layoutY="97.0" prefHeight="76.0" prefWidth="484.0"
+                                  promptText="Residential Address"/>
+                    </children>
+                </Pane>
+                <Label layoutX="45.0" layoutY="740.0" prefHeight="26.0" prefWidth="212.0"
+                       text="IS THE APPLICANT INDEBTED TO ANY :"/>
+                <Line endX="20.0" layoutX="136.0" layoutY="796.0" startX="-100.0"/>
+                <Button layoutX="724.0" layoutY="1.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="34.0"
+                        text="X" fx:id="x"/>
+                <Button fx:id="confirm" layoutX="35.0" layoutY="806.0" mnemonicParsing="false" prefHeight="65.0"
+                        prefWidth="122.0" text="CONFIRM"/>
+                <Pane fx:id="ClientGuarantor3" layoutX="67.0" layoutY="966.0" prefHeight="257.0" prefWidth="526.0">
+                    <children>
+                        <ComboBox fx:id="relationship_to_applicant" layoutX="228.0" layoutY="45.0" prefHeight="25.0"
+                                  prefWidth="204.0" promptText="RELATIONSHIP TO APPLICANT">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Employee"/>
+                                    <String fx:value="Co Worker"/>
+                                    <String fx:value="Friend"/>
+                                    <String fx:value="Any Other"/>
+                                    <String fx:value="Relative"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <ComboBox fx:id="level_of_responsibility" layoutX="319.0" layoutY="89.0" prefHeight="25.0"
+                                  prefWidth="195.0" promptText="LEVEL OF RESPONSIBILITY">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="HIGH"/>
+                                    <String fx:value="AVERAGE"/>
+                                    <String fx:value="LOW"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <ComboBox fx:id="debt_status" layoutX="17.0" layoutY="211.0" prefHeight="25.0" prefWidth="184.0"
+                                  promptText="DEBT STATUS">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="TRUE"/>
+                                    <String fx:value="FALSE"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <TextField fx:id="amount" layoutX="12.0" layoutY="168.0" prefHeight="26.0" prefWidth="318.0"
+                                   promptText="AMOUNT REQUESTED BY APPLICANT"/>
+                        <TextField fx:id="length_of_years_known" layoutX="12.0" layoutY="128.0" prefHeight="26.0"
+                                   prefWidth="318.0" promptText="HOW LONG HAVE YOU KNOWN THE APPLICANT"/>
+                        <Label layoutX="17.0" layoutY="44.0" prefHeight="26.0" prefWidth="212.0"
+                               text="RELATIONSHIP TO APPLICANT (TICK) :"/>
+                        <Label layoutX="12.0" layoutY="88.0" prefHeight="26.0" prefWidth="294.0"
+                               text="APPLICANTS SENSE OF RESPONSIBILITY/RELIABILITY :"/>
+                    </children>
+                </Pane>
+            </children>
+
+        </AnchorPane>
+    </content>
+</ScrollPane>
